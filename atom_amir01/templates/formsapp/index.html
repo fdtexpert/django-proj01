@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "formsapp/ambase.html" %}
+  {% load amfilters %}
+  {% block body_block %}
+      <div class="jumbotron">
+        <h1>Welcome to Forms Home Page!!!</h1>
+        <h2>Go to /formpage to fill out Form</h2>
+        <br />
+        <h1>{{ strdata }}</h1>
+        <h1>{{ strdata|upper }}</h1>
+        <h1>{{ strdata|cut:"World" }}</h1>
+        <h1>{{ numdata}}</h1>
+        <h1>{{ numdata|add:"99" }}</h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2>Testing....</h2>
+      </div>
+      {% endblock %}

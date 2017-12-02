@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Amir Testing 01</title>
+
+    <link rel="stylesheet" href="{% static "css/amstyle.css" %}"/>
+
+  </head>
+  <body>
+    <p> {{ insert_me }} </p>
+
+    <h1>AOA this is test 01</h1>
+    <h2>Here are Access Records data</h2>
+
+    <div class="amdjango">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </thead>
+          {% for item in access_records %}
+          <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.date }}</td>
+          </tr>
+          {% endfor %}
+
+        </table>
+      {% else %}
+        <p>NO RECORDS FOUND</p>
+      {% endif %}
+
+    </div>
+
+
+
+    <img src="{% static "Images/test.jpg" %}" alt="Cannot Load Image">
+
+  </body>
+</html>

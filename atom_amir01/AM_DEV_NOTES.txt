@@ -1,0 +1,68 @@
+# PIP INSTALLS (In venv actice)
+-- security / encr
+> pip install bcrypt
+> pip install django[argon2]
+
+#Image Library
+pip install pillow
+
+
+#TERMINOLOGY
+DRY - Dont Repeat Yourself -- DRY coding principles
+MTV - Model Template view
+
+#in python concole go to projects folder
+
+> django-admin startproject Django_proj1  #CREATES NEW PROJECT DIRECTORY
+
+> cd Django_proj1
+
+> django-admin startapp newapp_amir  # configure New App (Can be Multiple
+
+-- USEFULL COMMANDS
+1. n:\atom\atom-env\scripts\activate.ps1  --ACTIVATE ENVIROMENT
+
+
+-- AFTER CREATING MODELS FOR DB
+
+python manage.py migrate
+python manage.py makemigrations amtesting_app
+python manage.py migrate
+
+python manage.py shell   -- FOR CHECKING and PLAYING with Models/DB
+
+>>> from amtesting_app.models import Topic
+>>> print(Topic.objects.all())
+
+>>> t = Topic(Topic_name="Social Network")   --ADD RECORD to Table
+>>> t.save()
+
+>>> print(Topic.objects.all())    -- WILL SHOW 1 RECORD
+
+>>>quit()   -- EXIT CONSOLE
+-------------------------------------------------------------------------------------------
+
+-- ADMIN INTERFACE --
+---------------------
+-- IN admin.py FILE in amtesting_app FOLDER (Application FOLDER) ADD
+
+*********************************************************************
+from amtesting_app.models import AccessRecord,Topic,WebPage
+
+# Register your models here.
+
+admin.site.register(AccessRecord)
+admin.site.register(Topic)
+admin.site.register(WebPage)
+
+*********************************************************************
+
+-- CREATE SUPERUSER --
+----------------------
+
+PS N:\ATOM\my_django_projects\atom_amir01> python manage.py createsuperuser -- name,email,password
+
+-- MY CRED
+name=admin
+email=amusamair@yahoo.com
+password=1admin2admin3
